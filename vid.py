@@ -16,7 +16,7 @@ def go():
     methods_for_vid.check2(e2)
     if methods_for_vid.check(e1) == False and methods_for_vid.check2(e2) == False:
         lbl6.destroy()
-        lbl = Label(root, text='Подготовка файлов...')
+        lbl = Label(root, text='Подготовка файла...')
         lbl.place(x=20, y=150)
         delta = e2.get()
         root.update()
@@ -29,7 +29,7 @@ def go():
 
 
 root = Tk()
-root.title('Восстановление координат РКОТ v1.0')
+root.title('Восстановление координат РКОТ v1.2')
 root.geometry('590x200+100+150')
 root.resizable(False, False)
 

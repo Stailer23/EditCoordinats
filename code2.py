@@ -13,9 +13,9 @@ def start(filename, root, lbl, delta):
     wb1 = openpyxl.load_workbook(file,
                                  keep_vba=True)  # Открываем книгу. keep чтоб не было ошибки повреждения файла при сохранении
     cnt=0   #Счетчик пустых координат
-    for sheet in range(len(wb1.sheetnames)):  # для каждого листа по длине листов
+    for sheet in range(14):  # для каждого листа по длине листов  len(wb1.sheetnames)
         nomer(root,lbl, sheet)
-        if wb1.sheetnames[sheet] != 'Content' and wb1.sheetnames[sheet] != 'Protocol':  # не содержащих Контент и Протокол
+        if wb1.sheetnames[sheet] != 'Content' and wb1.sheetnames[sheet] != 'Protocol' and wb1.sheetnames[sheet] != 'GSM сканер' and wb1.sheetnames[sheet] != 'WCDMA сканер' and wb1.sheetnames[sheet] != 'LTE сканер':  # не содержащих Контент и Протокол
             wb1.active = sheet  # выбрать активный лист
             ws = wb1.active  # назвать его ws
             for row in range(3, ws.max_row):  # для строк с 3 по длину макс строк
